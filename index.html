@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>کلینیک قلب و عروق</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      color-scheme: only light;
+      font-family: "Vazirmatn", system-ui, sans-serif;
+      background-color: #f3f6ff;
+      color: #101331;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(135deg, #d9437b, #1b62ff);
+      color: white;
+      text-align: center;
+      padding: 2.5rem 1rem;
+    }
+    header h1 {
+      margin: 0 0 0.35rem;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    main {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+    }
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 1.25rem;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      background: #1b62ff;
+      color: white;
+      padding: 0.85rem 1.35rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 10px 25px rgba(27, 98, 255, 0.25);
+    }
+    .button.secondary {
+      background: #ff6b6b;
+      box-shadow: 0 10px 25px rgba(255, 107, 107, 0.35);
+    }
+    .button:active {
+      transform: translateY(2px);
+    }
+    .hero {
+      background: white;
+      border-radius: 18px;
+      padding: 1.75rem;
+      box-shadow: 0 15px 35px rgba(15, 21, 40, 0.15);
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .hero img {
+      width: 90px;
+      margin-bottom: 0.5rem;
+    }
+    .grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: 0 12px 24px rgba(15, 21, 40, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    .card small {
+      color: #5b617c;
+    }
+    .card ul {
+      margin: 0.35rem 0 0;
+      padding-left: 1rem;
+      color: #22254a;
+      line-height: 1.4;
+    }
+    .card button {
+      margin-top: auto;
+      align-self: flex-start;
+      border: none;
+      background: #101331;
+      color: white;
+      padding: 0.65rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .contact-panel {
+      background: white;
+      border-radius: 18px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 20px 35px rgba(15, 21, 40, 0.12);
+    }
+    .contact-panel h2 {
+      margin-top: 0;
+    }
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .contact-links a {
+      flex: 1 1 200px;
+      text-decoration: none;
+      background: #1b62ff;
+      color: white;
+      padding: 0.9rem 1rem;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 600;
+      box-shadow: 0 10px 20px rgba(27, 98, 255, 0.2);
+    }
+    .toggle-search {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      align-items: center;
+    }
+    .search-input {
+      flex: 1;
+      border: 1px solid #c6c8e3;
+      border-radius: 10px;
+      padding: 0.65rem 0.9rem;
+      font-size: 0.95rem;
+    }
+    .section 
+-title {
+      margin: 2rem 0 0.75rem;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>کلینیک قلب و عروق مهران</h1>
+    <p>اطلاعات تخصصی بیماری‌های قلبی، نارسایی، آریتمی و فاکتورهای خطر عروقی با زبان ساده</p>
+  </header>
+  <main>
+    <section class="hero">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Heart_symbol_red.svg/1200px-Heart_symbol_red.svg.png" alt="لوگو قلبی" />
+      <div class="button-row">
+        <a class="button" href="#topics">موضوعات</a>
+        <a class="button secondary" href="#contact">تماس با کلینیک</a>
+        <a class="button" href="tel:+98111222333">تماس سریع</a>
+      </div>
+    </section>
+
+    <section class="toggle-search">
+      <label for="search">جستجوی سریع:</label>
+      <input id="search" class="search-input" type="search" placeholder="مثلاً فشار خون" />
+    </section>
+
+    <section id="topics">
+      <p class="section-title">موضوعات اصلی</p>
+      <div class="grid" id="content-grid">
+        <article class="card" data-tags="کرونر بیماری عروق تشخیص">
+          <h3>بیماری‌های عروق کرونر</h3>
+          <small>تعریف، علائم، درمان، پیشگیری</small>
+          <ul>
+            <li>تعریف CAD و مسیر آترواسکلروز</li>
+            <li>علائم آنژین، تنگی نفس، عرق سرد</li>
+            <li>تغییر سبک زندگی و داروهای کلیدی</li>
+            <li>آنژیوپلاستی، بای‌پس و مراقبت روزانه</li>
+          </ul>
+          <button onclick="openDetail('coronary')">اطلاعات بیشتر</button>
+        </article>
+
+        <article class="card" data-tags="نارسایی قلب علائم درمان">
+          <h3>نارسایی قلبی</h3>
+          <small>مراحل، تشخیص، درمان کامل</small>
+          <ul>
+            <li>فرق HFrEF و HFpEF</li>
+            <li>علائم تنگی نفس، ورم، خستگی</li>
+            <li>درمان تغییر سبک، دارو، دستگاه</li>
+            <li>علائم هشدار و پیگیری روزانه</li>
+          </ul>
+          <button onclick="openDetail('failure')">اطلاعات بیشتر</button>
+        </article>
+
+        <article class="card" data-tags="آریتمی تعریف درمان">
+          <h3>آریتمی‌ها</h3>
+          <small>برادی‌کاردی، تاکی‌کاردی، مدیریت</small>
+          <ul>
+            <li>انواع برادیکاردی، تاکی‌کاردی، نامنظم</li>
+            <li>علائم: تپش قلب، سرگیجه، غش</li>
+            <li>درمان: پیس‌میکر، کاردیوورژن، آبلیشن</li>
+            <li>مدیریت خانگی، اجتناب از محرک‌ها</li>
+          </ul>
+          <button onclick="openDetail('arrhythmia')">اطلاعات بیشتر</button>
+        </article>
+
+        <article class="card" data-tags="پیشگیری سبک زندگی فشار خون">
+          <h3>پیشگیری از بیماری قلبی</h3>
+          <small>۱۴ اقدام پیشگیرانه + هفت قانون ساده</small>
+          <ul>
+            <li>رژیم مدیترانه‌ای، ورزش، وزن سالم</li>
+            <li>ترک سیگار، محدودیت الکل، مدیریت استرس</li>
+            <li>کنترل فشار خون، قند، کلسترول</li>
+            <li>معاینات منظم و شناخت علائم هشدار</li>
+          </ul>
+          <button onclick="openDetail('prevention')">اطلاعات بیشتر</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="details"></section>
+
+    <section id="contact" class="contact-panel">
+      <h2>تماس با کلینیک قلب و عروق مهران</h2>
+      <p>آدرس: خیابان ولی‌عصر، روبه‌روی بیمارستان امام، طبقه اول</p>
+      <p>شماره تلفن: 021-12345678</p>
+      <div class="contact-links">
+        <a href="tel:+982112345678">تماس مستقیم</a>
+        <a href="https://maps.google.com?q=Tehran+Valiasr+Street" target="_blank" rel="noreferrer">مسیر‌یابی با Google Maps</a>
+        <a href="https://instagram.com" target="_blank" rel="noreferrer">صفحه اینستاگرام</a>
+        <a href="https://exampleclinic.com" target="_blank" rel="noreferrer">سایت کلینیک</a>
+      </div>
+    </section>
+  </main>
+  <script>
+    const sections = 
+{
+      coronary: 
+        <article>
+          <h3>بیماری عروق کرونر قلب</h3>
+          <p>تعریف، مکانیزم آترواسکلروز، انواع آنژین و سندرم حاد قلبی. علائم، عوامل خطر و راه‌های درمانی (دارو+آنژیوپلاستی+بای‌پس).</p>
+        </article>,
+      failure: 
+        <article>
+          <h3>نارسایی قلبی</h3>
+          <p>تعریف HFpEF و HFrEF، طبقه‌بندی NYHA، علائم مختلف، درمان‌های سبک زندگی، داروها، دستگاه‌ها، مراقبت روزانه و علائم هشدار.</p>
+        </article>,
+      arrhythmia: 
+        <article>
+          <h3>آریتمی‌ها</h3>
+          <p>تعریف برادی‌کاردی، تاکی‌کاردی و ضربان نامنظم. علل رایج، درمان با پیس‌میکر، دارو، آبلیشن، ICD و مدیریت خانگی.</p>
+        </article>,
+      prevention: 
+        <article>
+          <h3>پیشگیری از بیماری قلبی</h3>
+          <p>رژیم غذایی سالم، ورزش منظم، کنترل وزن، ترک سیگار، محدودیت الکل، مدیریت استرس، خواب کافی، کنترل فشار، کلسترول، قند؛ همراه با هفت قانون ساده.</p>
+        </article>
+    };
+
+    function openDetail(key) {
+      const container = document.getElementById("details");
+      container.innerHTML = sections[key] || "<p>اطلاعاتی در دسترس نیست.</p>";
+      container.classList.add("section-title");
+    }
+
+    document.getElementById("search").addEventListener("input", event => {
+      const query = event.target.value.trim().toLowerCase();
+      const cards = document.querySelectorAll(".card");
+      cards.forEach(card => {
+        const matches = card.dataset.tags.includes(query) || card.innerText.toLowerCase().includes(query);
+        card.style.display = query ? (matches ? "flex" : "none") : "flex";
+      });
+    });
+  </script>
+</body>
+</html>
